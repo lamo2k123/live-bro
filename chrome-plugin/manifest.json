@@ -1,0 +1,25 @@
+{
+    "background": {
+        "scripts": [
+            "js/socket.io.min.js",
+            "js/app.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "img/icon.png",
+            "38": "img/icon.png"
+        },
+        "default_popup": "popup.html",
+        "default_title": "Not connected"
+    },
+    "description": "HTML/CSS/JavaScript editing and JavaScript debugging using JetBrains IDEs.",
+    "manifest_version": 2,
+    "name": "Live Bro",
+    "permissions": [
+        "tabs",
+        "http://*.club.vm-dev29/*",
+        "https://*.club.vm-dev29/*"
+    ],
+    "version": "0.1"
+}

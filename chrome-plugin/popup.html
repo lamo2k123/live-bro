@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="js/popup.js"></script>
+    <style type="text/css">
+        span {
+            width: 300px;
+            margin-top: 10px;
+            line-height: 20px;
+            display: block;
+            background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+            border: 1px solid #3079ed;
+            text-align: center;
+            box-sizing: border-box;
+            color: #f2f2f2;
+            cursor: pointer;
+        }
+
+        span:active {
+            background-image: -webkit-linear-gradient(top,#4787ed, #4d90fe);
+        }
+
+        input {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input id="socket-url" type="text" style="width: 300px;" value="liga.club.vm-dev29:4444" placeholder="http://exemple.com:8080/index.html" />
+        <span id="button-go">GO</span>
+    </form>
+</body>
+</html>
