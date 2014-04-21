@@ -1,0 +1,17 @@
+{
+    "name" : "Live-Bro",
+    "version" : "0.2.0",
+    "description" : "LB Real-time bro.",
+    "homepage" : "https://github.com/lamo2k123/live-bro",
+    "license" : "MIT",
+    "scripts" : {
+        "start" : "node app.js"
+    },
+    "repository" : {
+        "type" : "git",
+        "url" : "https://github.com/lamo2k123/live-bro.git"
+    },
+    "dependencies" : {
+        "socket.io" : "0.9.16"
+    }
+}
