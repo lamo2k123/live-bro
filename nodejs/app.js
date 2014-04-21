@@ -1,7 +1,8 @@
-var io = require('socket.io').listen(4444);
+var nconf   = require('nconf').argv(),
+    io      = require('socket.io').listen(nconf.get('port') || 4444);
 
 io.sockets.on('connection', function (socket) {
-
+    console.log(socket);
         var watcher = function(dir) {
             require('fs').watch(dir, { persistent: true }, function(event, filename) {
                 if(!/___jb_old___/.test(filename) && !/___jb_bak___/.test(filename)) {
