@@ -18,6 +18,7 @@
     "name": "Live Bro",
     "permissions": [
         "tabs",
+        "storage",
         "http://*.club.vm-dev29/*",
         "https://*.club.vm-dev29/*"
     ],

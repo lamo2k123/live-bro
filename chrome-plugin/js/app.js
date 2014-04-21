@@ -1,8 +1,21 @@
 
 chrome.runtime.onMessage.addListener(function(request, sender, senderResponse){
-        console.log(request);
         if(request.msg === 'socket') {
             var socket = io.connect(request.data.url);
+
+            socket.emit('bro:watcher', {
+                path : request.data.path
+            });
+
+            socket.on('bro:watcher', function(status) {
+                chrome.runtime.sendMessage({
+                    msg : 'bro:watcher',
+                    status : status
+                }, function(response){
+                    console.log('response', response);
+                });
+                console.log(status);
+            });
 
             socket.on('debug:live:reload',function(data){
                 if(data) {
